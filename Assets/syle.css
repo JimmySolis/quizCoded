@@ -1,0 +1,180 @@
+ *, *::before, *::after{
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+:root{
+    --hue-neutral: 2001;
+    --hue-wrong:  0;
+    --hue-correct: 145;
+     
+}
+
+body{
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue), 100%, 20%);
+} 
+
+body.correct {
+  --hue: var(--hue-correct);
+}
+
+body.wrong {
+  --hue: var(--hue-wrong);
+}
+
+
+
+.container{
+  width: 880px;
+  max-width: 88% ;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
+}
+
+.hide{
+  display: none;
+}
+
+
+.btn-grid{
+  display: flex;
+  justify-content: center;
+  grid-template-columns: repeat(2, 50%);
+  gap: 5px;
+  margin: 20px 0;
+
+}
+
+.btn{ 
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
+  background-color: orange;
+  width: 30%;
+  border-radius: 10px;
+  padding: 5px 10px ;
+}
+
+.btn:hover{
+ border-color: yellow; 
+}
+
+.btn.correct{
+  background-color:  lightgreen;
+
+}
+
+.btn.wrong{
+  background-color: red;
+
+}
+
+.next-btn{
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 10px 30px;
+ 
+}
+
+.start-btn{
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 10px 30px;
+}
+
+.controls{
+  display: flex;
+  justify-content: center;
+
+}
+
+.questions{
+  text-align: center;
+  font-size: 35px;
+
+}
+
+.scoreTrac{
+float:right;
+padding: 5px 0;
+margin: 5px;
+}
+
+.time{
+padding: 5px 5px 5px 5px ;
+margin: 5px;
+}
+
+.endScoreTrac{
+text-align: center;
+padding: 5px 0;
+margin: 5px;
+font-size: 25px;
+
+}
+
+.endTimer{
+  padding: 5px 5px 5px 5px ;
+  margin: 5px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+}
+
+.initials{
+  font-size: 35px;
+  text-align: center;
+  color: black;
+  text-transform: uppercase;
+  border-radius: 10px;
+  background-color: lightgray;
+  padding: 5px;
+  margin: 10px;
+}
+
+.highscore{
+  text-align: center;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+
+@media only screen and (max-width: 768px){
+.btn{
+
+  width: 90%;
+
+}
+.btn-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  gap: 5px;
+  margin: 20px 0;
+
+}
+
+.initials{
+  font-size: 20px;
+  text-align: center;
+  color: black;
+  text-transform: uppercase;
+  border-radius: 10px;
+  background-color: lightgray;
+  padding: 5px;
+  margin: 10px;
+}
+
+}
